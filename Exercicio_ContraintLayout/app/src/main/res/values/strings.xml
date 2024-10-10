@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Exercicio_ContraintLayout</string>
+    <string name="cappuccino">Cappuccino</string>
+    <string name="_15_minutes">15 minutos</string>
+    <string name="_54214">54214</string>
+    <string name="text_drink_cappuccino">Uma simples e perfeitamente extraida dose de espresso misturado com leite fresco e chocolate fazem esta bebida deliciosa</string>
+    <string name="ingredients">Ingredientes</string>
+    <string name="ingredient_first"><![CDATA[> 1 dose espresso]]></string>
+    <string name="second_ingredient"><![CDATA[> 100ml leite]]></string>
+    <string name="third_ingredient"><![CDATA[> 1 colher de chocolate em pó]]></string>
+</resources>

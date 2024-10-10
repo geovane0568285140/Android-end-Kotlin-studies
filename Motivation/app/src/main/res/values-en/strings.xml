@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Motivation</string>
+    <string name="hello">Hello</string>
+    <string name="hello_user_name">Hello, Kotlin!</string>
+    <string name="risks_taken">Risks must be taken because the greatest danger is not taking any risk!</string>
+    <string name="new_phrase">new phrase</string>
+    <string name="lets_start">let\'s start?</string>
+    <string name="what_name">What is your name?</string>
+    <string name="save">save</string>
+    <string name="motivation">Motivation</string>
+    <string name="validation_mandatory_name">Please enter your name</string>
+
+</resources>

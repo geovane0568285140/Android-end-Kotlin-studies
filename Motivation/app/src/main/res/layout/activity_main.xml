@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/liner_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/purple"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/image_baseline_ll"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_all"
+            />
+
+        <ImageView
+            android:id="@+id/image_baseline_emoji_emotions"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_emoji_emotions" />
+
+        <ImageView
+            android:id="@+id/image_baselina_sunny"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_sunny" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/text_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/liner_header"
+        android:layout_centerInParent="true"
+        android:layout_margin="12dp"
+        android:text="@string/hello_user_name"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/text_risks_taken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="@string/motivation"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="200dp"
+        android:layout_height="3dp"
+        android:layout_below="@+id/text_risks_taken"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/purple" />
+
+    <Button
+        android:id="@+id/button_new_phrase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp"
+        android:text="@string/new_phrase" />
+
+
+</RelativeLayout>

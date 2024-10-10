@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text_cappuccino"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:background="@color/brown"
+        android:gravity="center"
+        android:text="@string/cappuccino"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="38dp"
+        android:layout_height="35dp"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="@+id/text_cappuccino"
+        app:layout_constraintTop_toTopOf="@+id/text_cappuccino"
+        app:tint="@color/white" />
+
+    <ImageView
+        android:id="@+id/image_acees"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginVertical="18dp"
+        android:src="@drawable/baseline_access_time_24"
+        android:tint="@color/brown"
+        app:layout_constraintEnd_toStartOf="@+id/image_favorite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_cappuccino"
+        tools:ignore="UseAppTint" />
+
+    <ImageView
+        android:id="@+id/image_favorite"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginVertical="18dp"
+        android:src="@drawable/baseline_favorite_24"
+        android:tint="@color/brown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_acees"
+        app:layout_constraintTop_toBottomOf="@+id/text_cappuccino"
+        tools:ignore="UseAppTint" />
+
+    <TextView
+        android:id="@+id/text_minutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_15_minutes"
+        app:layout_constraintEnd_toEndOf="@+id/image_acees"
+        app:layout_constraintStart_toStartOf="@id/image_acees"
+        app:layout_constraintTop_toBottomOf="@+id/image_acees" />
+
+    <TextView
+        android:id="@+id/text_54214"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_54214"
+        app:layout_constraintEnd_toEndOf="@id/image_favorite"
+        app:layout_constraintStart_toStartOf="@id/image_favorite"
+        app:layout_constraintTop_toBottomOf="@+id/image_favorite" />
+
+
+    <View
+        android:id="@+id/view_Line"
+        android:layout_width="350dp"
+        android:layout_height="3dp"
+        android:background="@color/brown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_cappuccino"
+        app:layout_constraintVertical_bias="0.18" />
+
+    <TextView
+        android:id="@+id/text_about_cappuccino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="18dp"
+        android:text="@string/text_drink_cappuccino"
+        android:textColor="@color/brown"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_Line" />
+
+    <TextView
+        android:id="@+id/text_ingredients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/ingredients"
+        android:textColor="@color/brown"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_about_cappuccino" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_ingredients">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/ingredient_first"
+            android:textColor="@color/brown"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/second_ingredient"
+            android:textColor="@color/brown"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/third_ingredient"
+            android:textColor="@color/brown"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
