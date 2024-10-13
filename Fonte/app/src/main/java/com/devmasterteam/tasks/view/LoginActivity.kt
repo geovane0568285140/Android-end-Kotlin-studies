@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
+import com.devmasterteam.tasks.R
 import com.devmasterteam.tasks.databinding.ActivityLoginBinding
 import com.devmasterteam.tasks.viewmodel.LoginViewModel
 
@@ -30,9 +31,19 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         observe()
     }
 
-    override fun onClick(v: View) {
+    override fun onClick(view: View) {
+        if(view.id == R.id.button_login){
+            handerLogin()
+        }
     }
 
     private fun observe() {
+    }
+
+    private fun handerLogin(){
+        val email = binding.editEmail.text.toString()
+        val password = binding.editPassword.text.toString()
+
+        viewModel.doLogin(email, password)
     }
 }
