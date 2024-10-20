@@ -2,18 +2,28 @@ package com.devmasterteam.tasks.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
+import com.devmasterteam.tasks.service.listener.APIListener
+import com.devmasterteam.tasks.service.model.PersonModel
 import com.devmasterteam.tasks.service.repository.PersonRepository
 
 class LoginViewModel(application: Application) : AndroidViewModel(application) {
+
+    val person = PersonRepository(application.applicationContext)
 
     /**
      * Faz login usando API
      */
     fun doLogin(email: String, password: String) {
 
-        val person = PersonRepository()
+       person.personLogin(email, password, object : APIListener<PersonModel>{
 
-       person.personLogin(email, password)
+           override fun onSuccess(model: PersonModel) {
+           }
+
+           override fun onFailure(mensage: String) {
+           }
+
+       })
     }
 
     /**
