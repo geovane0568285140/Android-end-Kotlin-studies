@@ -6,6 +6,6 @@ interface APIListener<T> {
 
     fun onSuccess(model: PersonModel)
 
-    fun onFailure(mensage: String)
+    fun onFailure(message: String)
 
 }

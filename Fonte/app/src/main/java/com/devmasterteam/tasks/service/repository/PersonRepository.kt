@@ -22,11 +22,10 @@ class PersonRepository(val context: Context) {
 
         call.enqueue(object : Callback<PersonModel> {
             override fun onResponse(call: Call<PersonModel>, response: Response<PersonModel>) {
-                val s = ""
                 if(response.code() == TaskConstants.HTTP.SUCCESS){
                     response.body()!!.let { listener.onSuccess(it) }
                 } else {
-                    listener.onFailure(failResponse(response.errorBody()!!.toString()))
+                    listener.onFailure(failResponse(response.errorBody()!!.string()))
                 }
             }
 

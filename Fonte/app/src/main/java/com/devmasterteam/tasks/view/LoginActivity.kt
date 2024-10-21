@@ -1,11 +1,15 @@
 package com.devmasterteam.tasks.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.devmasterteam.tasks.R
 import com.devmasterteam.tasks.databinding.ActivityLoginBinding
+import com.devmasterteam.tasks.service.model.ValidationModel
 import com.devmasterteam.tasks.viewmodel.LoginViewModel
 
 class LoginActivity : AppCompatActivity(), View.OnClickListener {
@@ -32,15 +36,22 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(view: View) {
-        if(view.id == R.id.button_login){
+        if (view.id == R.id.button_login) {
             handerLogin()
         }
     }
 
     private fun observe() {
+        viewModel.login.observe(this) {
+            if (it.status()){
+                startActivity(Intent(applicationContext, MainActivity::class.java))
+            } else{
+                Toast.makeText(applicationContext, it.message(), Toast.LENGTH_LONG).show()
+            }
+        }
     }
 
-    private fun handerLogin(){
+    private fun handerLogin() {
         val email = binding.editEmail.text.toString()
         val password = binding.editPassword.text.toString()
 
