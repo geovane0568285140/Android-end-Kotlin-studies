@@ -31,6 +31,9 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         binding.buttonLogin.setOnClickListener(this)
         binding.textRegister.setOnClickListener(this)
 
+        // Verifica se o usuario esta logado
+        viewModel.verifyLoggedUser()
+
         // Observadores
         observe()
     }
@@ -49,6 +52,11 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
                 Toast.makeText(applicationContext, it.message(), Toast.LENGTH_LONG).show()
             }
         }
+
+        viewModel.loggedUser.observe(this) {
+            if (it)
+                startActivity(Intent(applicationContext, MainActivity::class.java))
+        }
     }
 
     private fun handerLogin() {
@@ -57,4 +65,5 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
         viewModel.doLogin(email, password)
     }
+
 }
